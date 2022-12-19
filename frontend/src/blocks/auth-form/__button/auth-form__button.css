@@ -1,0 +1,25 @@
+.auth-form__button {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  width: 358px;
+  height: 50px;
+  border: none;
+  border-radius: 2px;
+}
+
+.auth-form__button:hover {
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+
+.auth-form__button:disabled {
+  background-color: rgb(134, 134, 134);
+}
+
+.auth-form__button:disabled:hover {
+  cursor: default;
+}

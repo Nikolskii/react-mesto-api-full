@@ -1,0 +1,12 @@
+.element__image {
+  width: 282px;
+  height: 282px;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  margin-bottom: 22px;
+  object-fit: cover;
+}
+
+.element__image:hover {
+  cursor: pointer;
+}

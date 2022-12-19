@@ -1,0 +1,14 @@
+.content {
+  margin: 0 auto;
+  max-width: 880px;
+  padding: 38px 0 67px;
+  display: grid;
+  row-gap: 50px;
+}
+
+@media screen and (max-width: 710px) {
+  .content {
+    padding: 40px 19px 48px;
+    row-gap: 38px;
+  }
+}

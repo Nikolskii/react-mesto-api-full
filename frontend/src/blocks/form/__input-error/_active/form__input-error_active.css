@@ -1,0 +1,9 @@
+.form__input-error_active {
+  color: #ff0000;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.21;
+  position: absolute;
+  margin: -30px 0 0 0;
+}

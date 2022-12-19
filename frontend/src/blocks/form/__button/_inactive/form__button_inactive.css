@@ -1,0 +1,11 @@
+.form__button_inactive {
+  background-color: #f6f6f6;
+  color: #c5c5c5;
+  border: 1px solid #cbcbcb;
+  border-radius: 2px;
+}
+
+.form__button_inactive:hover {
+  cursor: default;
+  background-color: #f6f6f6;
+}
