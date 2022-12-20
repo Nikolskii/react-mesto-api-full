@@ -16,34 +16,6 @@ const { loginCelebrate, createUserCelebrate } = require('./validation/auth');
 const { PORT = 3000 } = process.env;
 const app = express();
 
-// test commit
-
-const allowedCors = [
-  'https://mesto-nikolsky.nomoredomains.club',
-  'localhost:3000',
-];
-
-app.use((req, res, next) => {
-  const { origin } = req.headers;
-
-  if (allowedCors.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin);
-  }
-
-  const { method } = req;
-
-  const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
-
-  const requestHeaders = req.headers['access-control-request-headers'];
-
-  if (method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
-    res.header('Access-Control-Allow-Headers', requestHeaders);
-  }
-
-  next();
-});
-
 app.use(helmet());
 app.use(limiter);
 app.use(express.json());
