@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.mesto-nikolsky.nomoredomains.club';
+export const BASE_URL = 'auth.nomoreparties.co';
 
 const checkResponse = (res) =>
   res.ok ? res.json() : Promise.reject(`Ошибка: ${res.statusText}`);
