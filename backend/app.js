@@ -16,6 +16,8 @@ const { loginCelebrate, createUserCelebrate } = require('./validation/auth');
 const { PORT = 3000 } = process.env;
 const app = express();
 
+// test commit
+
 const allowedCors = [
   'https://mesto-nikolsky.nomoredomains.club',
   'localhost:3000',
