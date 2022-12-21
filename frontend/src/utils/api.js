@@ -80,9 +80,9 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-50',
-  headers: {
-    authorization: 'b1e377f1-cd98-498c-a108-b0af0056347c',
-    'Content-Type': 'application/json',
-  },
+  baseUrl: 'http://api.mesto-nikolsky.nomoredomains.club',
+  // headers: {
+  //   authorization: 'b1e377f1-cd98-498c-a108-b0af0056347c',
+  //   'Content-Type': 'application/json',
+  // },
 });
