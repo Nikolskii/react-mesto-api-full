@@ -21,6 +21,11 @@ const allowedCors = [
   'localhost:3000',
 ];
 
+app.use(helmet());
+app.use(limiter);
+app.use(express.json());
+app.use(requestLogger);
+
 app.use((req, res, next) => {
   const { origin } = req.headers;
 
@@ -42,10 +47,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(helmet());
-app.use(limiter);
-app.use(express.json());
-app.use(requestLogger);
 app.post('/signin', loginCelebrate, controllers.login);
 app.post('/signup', createUserCelebrate, controllers.createUser);
 app.use(auth);
