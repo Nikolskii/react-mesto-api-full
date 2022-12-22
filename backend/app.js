@@ -25,6 +25,7 @@ app.use(
     origin: [
       'https://mesto-nikolsky.nomoredomains.club',
       'https://api.mesto-nikolsky.nomoredomains.club',
+      'localhost:3000',
     ],
     optionsSuccessStatus: 200,
     credentials: true,
