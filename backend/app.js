@@ -18,6 +18,7 @@ const app = express();
 
 const allowedCors = [
   'https://mesto-nikolsky.nomoredomains.club',
+  'https://api.mesto-nikolsky.nomoredomains.club',
   'localhost:3000',
 ];
 
