@@ -17,14 +17,17 @@ const { loginCelebrate, createUserCelebrate } = require('./validation/auth');
 const { PORT = 3000 } = process.env;
 const app = express();
 
+app.use(helmet());
+app.use(limiter);
+
 app.use(
   cors({
     origin: 'https://mesto-nikolsky.nomoredomains.club',
+    optionsSuccessStatus: 200,
+    credentials: true,
   }),
 );
 
-app.use(helmet());
-app.use(limiter);
 app.use(express.json());
 app.use(requestLogger);
 
