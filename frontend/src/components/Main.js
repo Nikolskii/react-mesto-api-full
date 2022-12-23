@@ -47,17 +47,19 @@ function Main({
       </section>
 
       <section className="elements" aria-label="Места">
-        {cards.map((card) => {
-          return (
-            <Card
-              onCardClick={onCardClick}
-              onCardLike={onCardLike}
-              onSubmitDelete={onSubmitDelete}
-              card={card}
-              key={card._id}
-            />
-          );
-        })}
+        {cards
+          .map((card) => {
+            return (
+              <Card
+                onCardClick={onCardClick}
+                onCardLike={onCardLike}
+                onSubmitDelete={onSubmitDelete}
+                card={card}
+                key={card._id}
+              />
+            );
+          })
+          .reverse()}
       </section>
     </main>
   );
