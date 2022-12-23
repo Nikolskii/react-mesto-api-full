@@ -3,8 +3,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
-const cors = require('cors');
 const { limiter } = require('./middlewares/limiter');
+const cors = require('./middlewares/cors');
 const errorHandler = require('./middlewares/errors');
 const auth = require('./middlewares/auth');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -19,26 +19,7 @@ const app = express();
 
 app.use(helmet());
 app.use(limiter);
-
-// app.use(
-//   cors({
-//     origin: [
-//       'https://mesto-nikolsky.nomoredomains.club',
-//       'https://api.mesto-nikolsky.nomoredomains.club',
-//       'localhost:3000',
-//     ],
-//     optionsSuccessStatus: 200,
-//     credentials: true,
-//   }),
-// );
-
-app.use(
-  cors({
-    origin: '*',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  }),
-);
-
+app.use(cors);
 app.use(express.json());
 app.use(requestLogger);
 
