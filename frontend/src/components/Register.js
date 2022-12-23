@@ -1,13 +1,9 @@
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import TextImport from './TextInput';
 
 function Register({ onRegister }) {
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-
   return (
     <section className="auth">
       <h1 className="auth__title">Регистрация</h1>
@@ -22,7 +18,7 @@ function Register({ onRegister }) {
             .email('Неверно указан адрес электронной почты')
             .required('Поле обязательно к заполнению'),
           password: Yup.string()
-            .min(8, 'Пароль должен содержать не менее 6 символов')
+            .min(8, 'Пароль должен содержать не менее 8 символов')
             .required('Поле обязательно к заполнению'),
         })}
         onSubmit={(values, { setSubmitting }) => {

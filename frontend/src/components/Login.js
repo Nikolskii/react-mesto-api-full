@@ -1,12 +1,8 @@
-import { useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import TextImport from './TextInput';
 
 function Login({ onLogin }) {
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
-
   return (
     <section className="auth">
       <h1 className="auth__title">Вход</h1>
@@ -21,7 +17,7 @@ function Login({ onLogin }) {
             .email('Неверно указан адрес электронной почты')
             .required('Поле обязательно к заполнению'),
           password: Yup.string()
-            .min(8, 'Пароль должен содержать не менее 6 символов')
+            .min(8, 'Пароль должен содержать не менее 8 символов')
             .required('Поле обязательно к заполнению'),
         })}
         onSubmit={(values, { setSubmitting }) => {

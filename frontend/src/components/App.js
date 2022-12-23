@@ -228,9 +228,6 @@ function App() {
         if (data.token) {
           localStorage.setItem('token', data.token);
           tokenCheck();
-          // setEmail(email);
-          // setLoggedIn(true);
-          // navigate('/');
         }
       })
       .catch((err) => {
