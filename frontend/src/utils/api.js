@@ -11,11 +11,18 @@ class Api {
     return Promise.reject(`Ошибка: ${res.status}`);
   }
 
+  _getHeaders() {
+    return {
+      authorization: `Bearer ${localStorage.getItem('token')}`,
+      'Content-Type': 'application/json',
+    };
+  }
+
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'GET',
       // credentials: 'include',
-      headers: this._headers,
+      headers: this._getHeaders(),
     }).then((res) => this._checkServerResponse(res));
   }
 
@@ -23,7 +30,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'GET',
       // credentials: 'include',
-      headers: this._headers,
+      headers: this._getHeaders(),
     }).then((res) => this._checkServerResponse(res));
   }
 
@@ -31,7 +38,7 @@ class Api {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
       // credentials: 'include',
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify({
         name: userData.name,
         about: userData.about,
@@ -43,7 +50,7 @@ class Api {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
       // credentials: 'include',
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify({
         avatar: avatar,
       }),
@@ -54,7 +61,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
       // credentials: 'include',
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify({
         name: name,
         link: link,
@@ -66,7 +73,7 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
       // credentials: 'include',
-      headers: this._headers,
+      headers: this._getHeaders(),
     }).then((res) => this._checkServerResponse(res));
   }
 
@@ -75,13 +82,13 @@ class Api {
       return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
         method: 'DELETE',
         // credentials: 'include',
-        headers: this._headers,
+        headers: this._getHeaders(),
       }).then((res) => this._checkServerResponse(res));
     } else {
       return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
         method: 'PUT',
         // credentials: 'include',
-        headers: this._headers,
+        headers: this._getHeaders(),
       }).then((res) => this._checkServerResponse(res));
     }
   }
@@ -89,7 +96,4 @@ class Api {
 
 export const api = new Api({
   baseUrl: 'https://api.mesto-nikolsky.nomoredomains.club',
-  headers: {
-    'Content-Type': 'application/json',
-  },
 });
