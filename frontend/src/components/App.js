@@ -143,7 +143,7 @@ function App() {
     api
       .addCard(name, link)
       .then((newCard) => {
-        setCards([newCard, ...cards]);
+        setCards([...cards, newCard]);
 
         closeAllPopups();
       })
@@ -154,7 +154,7 @@ function App() {
 
   // Обработчик лайка карточки
   function handleCardLike(card) {
-    const isLiked = card.likes.some((like) => like._id === currentUser._id);
+    const isLiked = card.likes.some((like) => like === currentUser._id);
 
     api
       .changeLikeCardStatus(card._id, isLiked)
