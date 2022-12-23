@@ -21,7 +21,7 @@ class Api {
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'GET',
-      // credentials: 'include',
+      credentials: 'include',
       headers: this._getHeaders(),
     }).then((res) => this._checkServerResponse(res));
   }
@@ -29,7 +29,7 @@ class Api {
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'GET',
-      // credentials: 'include',
+      credentials: 'include',
       headers: this._getHeaders(),
     }).then((res) => this._checkServerResponse(res));
   }
@@ -37,7 +37,7 @@ class Api {
   updateUserInfo(userData) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
-      // credentials: 'include',
+      credentials: 'include',
       headers: this._getHeaders(),
       body: JSON.stringify({
         name: userData.name,
@@ -49,7 +49,7 @@ class Api {
   updateUserAvatar(avatar) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
-      // credentials: 'include',
+      credentials: 'include',
       headers: this._getHeaders(),
       body: JSON.stringify({
         avatar: avatar,
@@ -60,7 +60,7 @@ class Api {
   addCard(name, link) {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
-      // credentials: 'include',
+      credentials: 'include',
       headers: this._getHeaders(),
       body: JSON.stringify({
         name: name,
@@ -72,7 +72,7 @@ class Api {
   deleteCard(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
-      // credentials: 'include',
+      credentials: 'include',
       headers: this._getHeaders(),
     }).then((res) => this._checkServerResponse(res));
   }
@@ -81,13 +81,13 @@ class Api {
     if (isLiked) {
       return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
         method: 'DELETE',
-        // credentials: 'include',
+        credentials: 'include',
         headers: this._getHeaders(),
       }).then((res) => this._checkServerResponse(res));
     } else {
       return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
         method: 'PUT',
-        // credentials: 'include',
+        credentials: 'include',
         headers: this._getHeaders(),
       }).then((res) => this._checkServerResponse(res));
     }

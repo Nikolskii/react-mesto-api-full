@@ -10,7 +10,6 @@ function Card({ card, onCardClick, onCardLike, onSubmitDelete }) {
     isOwn ? 'element__delete_visible' : 'element__delete_hidden'
   }`;
 
-  // const isLiked = card.likes.some((like) => like._id === currentUser._id);
   const isLiked = card.likes.some((like) => like === currentUser._id);
 
   const cardLikeButtonClassName = `element__like ${
