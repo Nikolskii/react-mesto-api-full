@@ -20,16 +20,22 @@ const app = express();
 app.use(helmet());
 app.use(limiter);
 
+// app.use(
+//   cors({
+//     origin: [
+//       'https://mesto-nikolsky.nomoredomains.club',
+//       'https://api.mesto-nikolsky.nomoredomains.club',
+//       'localhost:3000',
+//     ],
+//     optionsSuccessStatus: 200,
+//     credentials: true,
+//   }),
+// );
+
 app.use(
   cors({
-    // origin: [
-    //   'https://mesto-nikolsky.nomoredomains.club',
-    //   'https://api.mesto-nikolsky.nomoredomains.club',
-    //   'localhost:3000',
-    // ],
     origin: '*',
-    optionsSuccessStatus: 200,
-    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
   }),
 );
 
