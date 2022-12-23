@@ -154,7 +154,7 @@ function App() {
 
   // Обработчик лайка карточки
   function handleCardLike(card) {
-    const isLiked = card.likes.some((like) => like._id === currentUser._id);
+    const isLiked = card.likes.some((like) => like === currentUser._id);
 
     api
       .changeLikeCardStatus(card._id, isLiked)
