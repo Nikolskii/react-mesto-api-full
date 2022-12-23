@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8ef47baf.css",
+    "main.js": "/static/js/main.c392b393.js",
+    "static/media/Inter-Medium.woff": "/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2": "/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2": "/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/header-logo.svg": "/static/media/header-logo.bbe2a6eafac19c3d031c272c424875ca.svg",
+    "static/media/element-like.svg": "/static/media/element-like.1ad06e85f169668a1f36.svg",
+    "static/media/element-delete.svg": "/static/media/element-delete.e3c42771bff3aaa52f76.svg",
+    "static/media/registration-unsuccess.svg": "/static/media/registration-unsuccess.d4ce2a261b68c6da973d51ef98afae1a.svg",
+    "index.html": "/index.html",
+    "static/media/registration-success.svg": "/static/media/registration-success.a9eb6caf1da3ff48b215fb1dd9477d74.svg",
+    "static/media/element-like-active.svg": "/static/media/element-like-active.35948469632d0421d697.svg",
+    "static/media/profile-edit-button-mobile.svg": "/static/media/profile-edit-button-mobile.f66e917d7fb212913c9e.svg",
+    "static/media/profile-add-button-mobile.svg": "/static/media/profile-add-button-mobile.8e041299935e2fbbe15e.svg",
+    "static/media/profile-add-button.svg": "/static/media/profile-add-button.13997fdf54b4cb323817.svg",
+    "static/media/profile-edit-button.svg": "/static/media/profile-edit-button.af236f6cf67005f1d7aa.svg",
+    "static/media/profile-update-avatar.svg": "/static/media/profile-update-avatar.ae1a976ddb506239e9f0.svg",
+    "static/media/popup-close.svg": "/static/media/popup-close.039f1f5203f653b4bacd.svg",
+    "static/media/popup-close-mobile.svg": "/static/media/popup-close-mobile.622e8cdafa2222aa7c54.svg",
+    "main.8ef47baf.css.map": "/static/css/main.8ef47baf.css.map",
+    "main.c392b393.js.map": "/static/js/main.c392b393.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ef47baf.css",
+    "static/js/main.c392b393.js"
+  ]
+}
