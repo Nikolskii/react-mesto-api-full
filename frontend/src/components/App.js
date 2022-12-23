@@ -203,6 +203,21 @@ function App() {
       });
   }
 
+  // Проверка токена
+  function tokenCheck() {
+    const token = localStorage.getItem('token');
+
+    if (token) {
+      auth.checkToken(token).then((data) => {
+        setEmail(data.email);
+
+        setLoggedIn(true);
+
+        navigate('/');
+      });
+    }
+  }
+
   // Обработчик формы аутентификации
   function handleLogin({ email, password }) {
     setLoading(true);
@@ -211,12 +226,11 @@ function App() {
       .login({ email, password })
       .then((data) => {
         if (data.token) {
-          console.log(data);
-          console.log(data.token);
           localStorage.setItem('token', data.token);
-          setEmail(email);
-          setLoggedIn(true);
-          navigate('/');
+          tokenCheck();
+          // setEmail(email);
+          // setLoggedIn(true);
+          // navigate('/');
         }
       })
       .catch((err) => {
@@ -228,21 +242,6 @@ function App() {
       .finally(() => {
         setLoading(false);
       });
-  }
-
-  // Проверка токена
-  function tokenCheck() {
-    const token = localStorage.getItem('token');
-
-    if (token) {
-      auth.checkToken(token).then((data) => {
-        setEmail(data.data.email);
-
-        setLoggedIn(true);
-
-        navigate('/');
-      });
-    }
   }
 
   // Обработчик выхода
