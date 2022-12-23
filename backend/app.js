@@ -22,11 +22,12 @@ app.use(limiter);
 
 app.use(
   cors({
-    origin: [
-      'https://mesto-nikolsky.nomoredomains.club',
-      'https://api.mesto-nikolsky.nomoredomains.club',
-      'localhost:3000',
-    ],
+    // origin: [
+    //   'https://mesto-nikolsky.nomoredomains.club',
+    //   'https://api.mesto-nikolsky.nomoredomains.club',
+    //   'localhost:3000',
+    // ],
+    origin: '*',
     optionsSuccessStatus: 200,
     credentials: true,
   }),
