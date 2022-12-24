@@ -1,0 +1,15 @@
+.page {
+  background-color: #000;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 45px 20px 60px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (max-width: 710px) {
+  .page {
+    padding: 28px 0 36px;
+  }
+}

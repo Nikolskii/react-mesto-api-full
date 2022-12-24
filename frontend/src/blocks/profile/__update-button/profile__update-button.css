@@ -1,0 +1,16 @@
+.profile__update-button {
+  background: black url(../../../images/profile-update-avatar.svg) no-repeat center;
+  border-radius: 45%;
+  border: none;
+  padding: 0;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.profile__update-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
