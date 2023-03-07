@@ -33,3 +33,9 @@
   font-weight: 400;
   color: #ccc;
 }
+
+@media screen and (max-width: 580px) {
+  .auth-form__input {
+    width: 320px;
+  }
+}

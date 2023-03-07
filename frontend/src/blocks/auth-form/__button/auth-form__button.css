@@ -23,3 +23,9 @@
 .auth-form__button:disabled:hover {
   cursor: default;
 }
+
+@media screen and (max-width: 580px) {
+  .auth-form__button {
+    width: 320px;
+  }
+}
