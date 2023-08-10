@@ -2,9 +2,6 @@
 
 ## Учебный проект курса «Веб‑разработчик» от Яндекс.Практикум
 
-- Frontend [https://mesto-nikolsky.nomoredomains.club/](https://mesto-nikolsky.nomoredomains.club/)
-- Backend [https://api.mesto-nikolsky.nomoredomains.club/](https://api.mesto-nikolsky.nomoredomains.club/)
-
 «Mesto» – React-приложение с возможностью регистрации, редактирования профиля, добавления и удаления фотокарточек.
 
 ### Функционал
